@@ -1,0 +1,34 @@
+#newItem {
+  width: 70%;
+  padding: 5px;
+}
+
+#header {
+  color: red;
+}
+
+input {
+  border: 1px solid #007acc;
+  border-radius: 3px;
+  background-color: #f1f1f1;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+#itemList {
+  list-style-type: none;
+  padding: 0;
+}
+#itemList li {
+  background-color: #f1f1f1;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+}
