@@ -3,7 +3,6 @@
   const previousState = vscode.getState();
 
   let items = previousState?.items ?? [];
-
   document.getElementById("newItem").addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
       const input = document.getElementById("newItem");
@@ -17,6 +16,7 @@
     if (!text) {
       return;
     }
+
     items.push({ id: Date.now().toString(), text });
     vscode.setState({ items });
     updateItems();
