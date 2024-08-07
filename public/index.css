@@ -1,34 +1,89 @@
 #newItem {
-  width: 70%;
+  width: 100%;
   padding: 5px;
+  border-radius: 2px;
+  border: 1px solid var(--vscode-input-border);
+  background-color: var(--vscode-editor-background);
+  color: var(--vscode-editor-foreground);
 }
 
-#header {
-  color: red;
+#newItem:focus {
+  border: 1px solid red;
 }
 
-input {
-  border: 1px solid #007acc;
-  border-radius: 3px;
-  background-color: #f1f1f1;
-}
-
-button {
-  padding: 5px 10px;
-  background-color: #007acc;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
 #itemList {
   list-style-type: none;
   padding: 0;
 }
+
 #itemList li {
-  background-color: #f1f1f1;
-  margin: 5px 0;
-  padding: 10px;
+  margin: 10px 0;
+  padding: 20px 12px;
   border-radius: 3px;
+  background-color: var(--vscode-editor-background);
+  position: relative;
+}
+
+.side-clipboard-code-block-container {
+  position: relative;
+}
+
+.side-clipboard-code-block {
+  background-color: var(--vscode-textCodeBlock-background);
+  border: 1px solid var(--vscode-input-border);
+  border-radius: 4px;
+  padding: 16px 20px;
+  font-family: var(--vscode-editor-font-family);
   display: flex;
-  justify-content: space-between;
+  word-break: break-word;
+}
+
+.side-clipboard-code-block-container:hover .side-clipboard-code-block {
+  opacity: 0.8;
+}
+
+.trash-button {
+  position: absolute;
+  background-color: transparent;
+  right: -1px;
+  top: 1px;
+  color: var(--vscode-interactive-session-foreground);
+  border-radius: 2px;
+  border-width: 0px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.action-buttons-container {
+  right: 5px;
+  top: 2px;
+  margin-top: 10px;
+  display: none;
+  position: absolute;
+  justify-content: flex-end;
+  button {
+    margin-left: 10px;
+  }
+}
+
+.side-clipboard-code-block-container:hover .action-buttons-container {
+  display: flex;
+}
+
+.action-button {
+  border-radius: 2px;
+  border-width: 0px;
+  padding: 5px 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--vscode-button-secondaryBackground);
+  color: var(--vscode-button-secondaryForeground);
+}
+
+.action-button:hover {
+  background-color: var(--vscode-button-secondaryHoverBackground);
 }

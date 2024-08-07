@@ -14,24 +14,17 @@
   "contributes": {
     "commands": [
       {
-        "command": "side-clipboard.helloWorld",
-        "title": "Hello World"
-      },
-      {
-        "command": "side-clipboard.addTodo",
-        "title": "Copy"
-      },
-      {
-        "command": "side-clipboard.deleteTodo",
-        "title": "Paste"
+        "command": "sideClipboard.addItemFromClipboard",
+        "category": "Side Clipboard",
+        "title": "Add Item from Clipboard"
       }
     ],
     "views": {
       "side-clipboard-view": [
         {
-          "id": "sideClipboardView",
-          "name": "LIST",
-          "type": "webview"
+          "type": "webview",
+          "id": "sideClipboard.itemsView",
+          "name": "Side Clipboard"
         }
       ]
     },
@@ -61,6 +54,7 @@
     "@typescript-eslint/parser": "^7.11.0",
     "eslint": "^8.57.0",
     "typescript": "^5.4.5",
+    "@vscode/codicons": "0.0.20",
     "@vscode/test-cli": "^0.0.9",
     "@vscode/test-electron": "^2.4.0"
   }
