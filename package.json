@@ -1,6 +1,7 @@
 {
   "name": "side-clipboard",
   "displayName": "side-clipboard",
+  "publisher": "ikoamu",
   "description": "",
   "version": "0.0.1",
   "engines": {
