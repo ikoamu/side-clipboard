@@ -9,6 +9,17 @@
   "categories": [
     "Other"
   ],
+  "keywords": [
+    "Copy",
+    "Clipboard",
+    "Terminal"
+  ],
+  "pricing": "Free",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ikoamu/side-clipboard"
+  },
+  "icon": "images/icon.png",
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
@@ -33,7 +44,7 @@
         {
           "id": "side-clipboard-view",
           "title": "Side Clipboard",
-          "icon": "resource/clipboard-svgrepo-com.svg"
+          "icon": "images/codicon--clippy.svg"
         }
       ]
     }
