@@ -26,9 +26,9 @@
   "contributes": {
     "commands": [
       {
-        "command": "sideClipboard.addItemFromClipboard",
+        "command": "sideClipboard.addItemFromInputBox",
         "category": "Side Clipboard",
-        "title": "Add Item from Clipboard"
+        "title": "Add Item from InputBox"
       }
     ],
     "views": {

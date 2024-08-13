@@ -9,12 +9,9 @@ export function activate(context: vscode.ExtensionContext) {
     ),
   );
   context.subscriptions.push(
-    vscode.commands.registerCommand(
-      "sideClipboard.addItemFromClipboard",
-      () => {
-        provider.addItemFromClipboard();
-      },
-    ),
+    vscode.commands.registerCommand("sideClipboard.addItemFromInputBox", () => {
+      provider.addItemFromInputBox();
+    }),
   );
 }
 
@@ -28,16 +25,27 @@ export class ItemsViewProvider implements vscode.WebviewViewProvider {
 
   constructor(private readonly extensionUri: vscode.Uri) {}
 
-  public addItemFromClipboard() {
+  public addItemFromInputBox() {
     vscode.env.clipboard.readText().then((text) => {
-      if (!text || !this._view) {
+      if (!this._view) {
         return;
       }
 
-      this._view?.webview.postMessage({
-        type: "addItem",
-        text,
+      const input = vscode.window.createInputBox();
+      input.placeholder = "New Item";
+      input.value = text;
+      input.onDidAccept((_) => {
+        if (!input.value) {
+          return;
+        }
+
+        this._view?.webview.postMessage({
+          type: "addItem",
+          text: input.value,
+        });
+        input.hide();
       });
+      input.show();
     });
   }
 
