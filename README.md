@@ -6,7 +6,7 @@
 
 ### Registering text in Side Clipboard
 
-Text can be registered from the Input in the side menu. You can also directly register the contents of the clipboard.
+Text can be registered from the Input in the side menu. You can also use the `Add Item from InputBox` command to instantly register a command.
 
 ![Registering text in Side Clipboard Sample](images/register_test_sample.gif)
 
